@@ -1,16 +1,12 @@
-Teo Ma
 
-CSA, Microsoft GPS Tech
 
-目录
-
-> [实验背景 [3](#实验背景)](#实验背景)
+> [实验背景](#实验背景)
 >
-> [实验环境准备 [12](#实验环境准备)](#实验环境准备)
+> [实验环境准备](#实验环境准备)
 >
-> [动手实验 [19](#动手实验)](#动手实验)
+> [动手实验](#动手实验)
 >
-> [考虑 [34](#考虑)](#考虑)
+> [考虑](#考虑)
 
 ## 实验背景
 
@@ -40,8 +36,7 @@ CAF、Docker、Git知识，以及具有简单的开发技能**。
 本动手实验中的步骤将指导您完成以下过程：
 
 ![Azure
-登陆区域环境的创建](./media/media/image1.png){width="5.768055555555556in"
-height="2.582638888888889in"}
+登陆区域环境的创建](./media/media/image1.png)
 
 ## 所需基础知识介绍
 
@@ -53,12 +48,10 @@ height="2.582638888888889in"}
 > Zone可在Azure中实现应用程序迁移、现代化和创新。此方法考虑支持客户应用程序组合所需的所有平台资源，并且不会区分基础结构即服务或平台即服务。
 
 ![图形用户界面
-低可信度描述已自动生成](./media/media/image2.png){width="5.768055555555556in"
-height="3.158333333333333in"}
+低可信度描述已自动生成](./media/media/image2.png)
 
 ![图形用户界面, 图示
-描述已自动生成](./media/media/image3.png){width="5.768055555555556in"
-height="4.364583333333333in"}
+描述已自动生成](./media/media/image3.png)
 
 2.  **Azure Terraform**
 
@@ -73,8 +66,7 @@ Zone概念体系结构部署平台资源的正式 Terraform 模块。
 Zone超出了模块的范围，从而决定部署方法和工具给负责应用程序的团队。
 
 ![图形用户界面, 应用程序
-描述已自动生成](./media/media/image4.png){width="5.768055555555556in"
-height="2.738888888888889in"}
+描述已自动生成](./media/media/image4.png)
 
 CAF Terraform Landing Zone方法是一组工具，提供抽象的、有意见的 Terraform
 实现，以在 Azure 中提供部署自动化。 它允许客户使用 Terraform
@@ -83,14 +75,12 @@ CAF Terraform Landing Zone方法是一组工具，提供抽象的、有意见的
 Landing Zone Terraform 模块。
 
 ![图形用户界面, 应用程序
-描述已自动生成](./media/media/image5.png){width="5.768055555555556in"
-height="3.4166666666666665in"}
+描述已自动生成](./media/media/image5.png)
 
 下图演示了两种方法的覆盖范围：
 
 ![Terraform module
-comparison](./media/media/image6.png){width="5.768055555555556in"
-height="2.895138888888889in"}
+comparison](./media/media/image6.png)
 
 > CAF Terraform 登陆区产品团队的使命是：
 
@@ -175,8 +165,7 @@ Rover 已经包含在 CAF Terraform
 Rover ignite 将 YAML 文件作为模板摄取，这些模板将生成 tfvars
 文件、readme文件和即将生成的管道。
 
-![火星车点火概述](./media/media/image7.png){width="5.768055555555556in"
-height="2.5340277777777778in"}
+![火星车点火概述](./media/media/image7.png)
 
 总结下来，Rover
 Ignite生成基于客户环境所需的Rover变量及含有运行Rover命令的readme文件等客户化配置信息。Readme文档里含有执行命令及描述。基于这些执行命令，可以通过复制/粘贴快速执行Rover命令进行部署。
@@ -238,16 +227,14 @@ Platform starter
 template](https://github.com/Azure/caf-terraform-landingzones-platform-starter)如下：
 
 ![图形用户界面, 文本, 网站
-描述已自动生成](./media/media/image8.png){width="5.768055555555556in"
-height="3.2118055555555554in"}
+描述已自动生成](./media/media/image8.png)
 
 [Gitee 上Cloud Adoption Framework landing zones for Terraform - Platform
 starter
 template](https://gitee.com/mirrors_Azure/caf-terraform-landingzones-platform-starter)如下：
 
 ![电脑萤幕的截图
-描述已自动生成](./media/media/image9.png){width="5.768055555555556in"
-height="3.8229166666666665in"}
+描述已自动生成](./media/media/image9.png)
 
 5.  在以下命令行\<org>/\<repo> 位置替换成你的github或gitee仓库地址
 
@@ -270,40 +257,34 @@ code .
 根据下图提示选择**信任存储库**
 
 ![文本
-描述已自动生成](./media/media/image10.png){width="5.768055555555556in"
-height="3.7416666666666667in"}
+描述已自动生成](./media/media/image10.png)
 
 Visual Studio Code
 
 7.  在Visual Studio code打开克隆的存储库并显示以下结构。
 
 ![电脑屏幕的截图
-描述已自动生成](./media/media/image11.png){width="5.768055555555556in"
-height="2.775in"}
+描述已自动生成](./media/media/image11.png)
 
 8.  添加VS Code远程开发extension插件。选择**Remote --
     Containers**插件并单击安装。
 
 ![电脑屏幕的手机截图
-描述已自动生成](./media/media/image12.png){width="5.768055555555556in"
-height="4.55in"}
+描述已自动生成](./media/media/image12.png)
 
 9.  在VS code顶部，单击查看-\>命令面板
 
 ![电脑屏幕的截图
-描述已自动生成](./media/media/image13.png){width="5.768055555555556in"
-height="3.939583333333333in"}
+描述已自动生成](./media/media/image13.png)
 
 10. 输入Remote-Containers，点击它。Rover容器将被启动。
 
-![](./media/media/image14.png){width="5.768055555555556in"
-height="4.411111111111111in"}
+![](./media/media/image14.png)
 
 11. 您现在应该看到以下终端（Terminal）。您将在此终端运行本实验中描述的所有终端命令。
 
 ![图片包含 图形用户界面
-描述已自动生成](./media/media/image15.png){width="5.768055555555556in"
-height="0.8708333333333333in"}
+描述已自动生成](./media/media/image15.png)
 
 12. 克隆 CAF Terraform
     landingzones[代码](https://aztfmod.github.io/documentation/docs/azure-landing-zones/landingzones/platform/org-setup#clone-the-caf-terraform-landingzones-code)。现在您已经准备好使用配置文件夹，让我们克隆我们将用于运行命令的登陆区的逻辑（Terraform
@@ -386,16 +367,14 @@ URL [[https://microsoft.com/devicelogin]{.underline}](https://microsoft.com/dev
 Azure 帐户进行身份验证。
 
 ![文本
-描述已自动生成](./media/media/image16.png){width="5.768055555555556in"
-height="1.7548611111111112in"}
+描述已自动生成](./media/media/image16.png)
 
 3.  登录成功后，您会看到Rover显示您的 Azure
     环境的上下文。验证一切是否正确。您可以查看Rover输出，确认 AAD
     和订阅的经过身份验证的上下文，以及可能的下一个命令。
 
 ![文本
-描述已自动生成](./media/media/image17.png){width="5.768055555555556in"
-height="3.41875in"}
+描述已自动生成](./media/media/image17.png)
 
 4.  现在让我们从landingzones中选择正确的配置文件示例并将其放入我们的配置存储库中。
 
@@ -422,8 +401,7 @@ Default CAF Azure region key \[region1\]:
 
 6.  完成后，您可以转到launchpad readme文件。
 
-![启动板入门](./media/media/image18.png){width="5.768055555555556in"
-height="2.2805555555555554in"}
+![启动板入门](./media/media/image18.png)
 
 7.  查看和客户化定义文件
 
@@ -543,48 +521,41 @@ skipping: \[localhost\]
     /tf/caf/configuration/contoso/platform/level0/launchpad/readme.md
 
 ![文本
-描述已自动生成](./media/media/image19.png){width="5.768055555555556in"
-height="3.359722222222222in"}
+描述已自动生成](./media/media/image19.png)
 
 在readme中您会看到基于你的Azure环境生成了客户化的landing
 zone部署命令和解释说明，根据readme描述提示，一步接一步的运行命令进行部署。
 
 ![图形用户界面, 文本
-描述已自动生成](./media/media/image20.png){width="5.768055555555556in"
-height="4.550694444444445in"}
+描述已自动生成](./media/media/image20.png)
 
 **注意：**每次通过rover命令执行正式部署（-a apply）前,要先通过rover -a
 plan命令进行环境检查和部署变化，以便确保部署成功和预先了解部署前后状态变化。观测下面两个Rover命令的参数变化：
 
 ![文本
-描述已自动生成](./media/media/image21.png){width="5.768055555555556in"
-height="3.8534722222222224in"}
+描述已自动生成](./media/media/image21.png)
 
 10. 运行 rover xxxxxxx -a
     plan命令，第一次执行过程可能需要10分钟甚至更长时间，期间会检查Azure账户信息，环境状态信息和部署前后变化等，以及所需依赖包及版本，需要的话可能会下载相应的依赖包。
 
 ![文本
-描述已自动生成](./media/media/image22.png){width="5.768055555555556in"
-height="2.433333333333333in"}
+描述已自动生成](./media/media/image22.png)
 
 11. Plan命令成功结束后，观察输出的文本信息，可以看到部署前后将会产生的变化信息：
 
 ![文本
-描述已自动生成](./media/media/image23.png){width="5.768055555555556in"
-height="2.717361111111111in"}
+描述已自动生成](./media/media/image23.png)
 
 12. 接下来正式通过apply 执行部署landing zone launchpad
 
 ![图形用户界面, 文本
-描述已自动生成](./media/media/image24.png){width="5.768055555555556in"
-height="3.1020833333333333in"}
+描述已自动生成](./media/media/image24.png)
 
 13. apply
     命令成功结束后，观察输出的文本信息，可以看到部署前后将会产生的变化信息：
 
 ![文本
-描述已自动生成](./media/media/image25.png){width="5.768055555555556in"
-height="4.8180555555555555in"}
+描述已自动生成](./media/media/image25.png)
 
 14. 登录Azure
     Portal，观测生成的资源组和资源信息，生成了3个资源组，每个资源组含有一个Key
@@ -593,12 +564,10 @@ height="4.8180555555555555in"}
     zone管理，并不含有客户业务系统的workload资源。
 
 ![电脑萤幕的截图
-描述已自动生成](./media/media/image26.png){width="5.768055555555556in"
-height="2.0993055555555555in"}
+描述已自动生成](./media/media/image26.png)
 
 ![图形用户界面, 文本, 应用程序, 电子邮件
-描述已自动生成](./media/media/image27.png){width="5.768055555555556in"
-height="3.0083333333333333in"}
+描述已自动生成](./media/media/image27.png)
 
 15. 每个部署的readme文件在完成了相应部分的部署操作后，都会提示下一步操作，按readme中指引的Next
     Step完成之后的操作任务。当完成level2后，所需的企业级landing
@@ -606,8 +575,7 @@ height="3.0083333333333333in"}
     Terraform部署应用worklaod。
 
 ![文本
-描述已自动生成](./media/media/image28.png){width="5.768055555555556in"
-height="3.526388888888889in"}
+描述已自动生成](./media/media/image28.png)
 
 16. 上面实验中，通过Azure Terraform Rover完成了Landing Zone的部署，即：
 
@@ -623,7 +591,7 @@ height="3.526388888888889in"}
 接下来，Partner可以通过生成的tfvar变量及rover命令近一步理解Azure
 Terraform Provider/Azure Terraform Module/Rover/Rover
 Ignite逻辑关系，并尝试部署你客户业务场景中所需的上层应用workload，比如
-IaaS（VM，存储等），PaaS（Mysql，Web Apps等）
+IaaS（VM，存储等），PaaS（Mysql，Web Apps等)。
 
 近一步学习和使用Azure Landing Zone for Terraform还可以参考如下资源：
 
@@ -635,9 +603,6 @@ IaaS（VM，存储等），PaaS（Mysql，Web Apps等）
 3.  [Cloud Adoption Framework for Terraform Landing
     zones](https://aztfmod.github.io/documentation/)
 
-```{=html}
-<!-- -->
-```
 4.  [CAF Landing Zone
     Starter](https://github.com/Azure/caf-terraform-landingzones-starter)
 
