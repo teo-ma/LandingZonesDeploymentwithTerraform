@@ -78,7 +78,7 @@
 
 ![](./media/media/image14.png)
 
-11. 您现在应该看到以下终端（Terminal）。您将在此终端运行本实验中描述的所有终端命令。
+11. 您现在应该看到VS Code底部有以下终端（Terminal）。该终端命令行连接到了您本机的Rover容器，您将在此终端运行本实验中描述的所有终端命令。
 
 ![图片包含 图形用户界面描述已自动生成](./media/media/image15.png)
 
@@ -160,7 +160,7 @@ az cloud set -n AzureChinaCloud
 rover login
 ```
 
-单击URL [[https://microsoft.com/devicelogin]{.underline}](https://microsoft.com/devicelogin)，设置代码并使用您的Azure 帐户进行身份验证。
+之后，单击URL [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin)在浏览器打开认证页面，输入终端命令行给出的验证代码（code）并使用您的Azure 帐户进行身份验证。
 
 ![文本
 描述已自动生成](./media/media/image16.png)
@@ -193,7 +193,7 @@ rover login
     \'southeastasia\', \'region2\': \'eastasia\'}\]:\
     Default CAF Azure region key \[region1\]:
 
-6.  完成后，您可以转到launchpad readme文件。
+6.  完成后的终端输出信息如下。
 
 ![启动板入门](./media/media/image18.png)
 
