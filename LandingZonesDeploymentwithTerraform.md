@@ -82,10 +82,9 @@
 
 ![图片包含 图形用户界面描述已自动生成](./media/media/image15.png)
 
-12. 克隆 CAF Terraformlandingzones[代码](https://aztfmod.github.io/documentation/docs/azure-landing-zones/landingzones/platform/org-setup#clone-the-caf-terraform-landingzones-code)。现在您已经准备好使用配置文件夹，让我们克隆我们将用于运行命令的登陆区的逻辑（Terraform
-    代码）。
-    **注意：**CAF Terraform Landing Zone框架假定Landing Zone Terraform代码被克隆到名为**landingzones**的存储库中。不要使用其他名称作**landingzones**，这是用于驱动一致性的约定。
+12. 克隆 CAF Terraformlandingzones[代码](https://aztfmod.github.io/documentation/docs/azure-landing-zones/landingzones/platform/org-setup#clone-the-caf-terraform-landingzones-code)。现在您已经准备好使用配置文件夹，让我们克隆我们将用于运行命令的登陆区的逻辑（Terraform代码）。
 
+    **注意：**CAF Terraform Landing Zone框架假定Landing Zone Terraform代码被克隆到名为**landingzones**的存储库中。不要使用其他名称作**landingzones**，这是用于驱动一致性的约定。
     Github:
 
     ```bash
@@ -138,24 +137,28 @@
 
 2.  第一步是在命令行登录到你的 Azure 环境，你可以简单地运行
 
+
   **注意**：本动手实验文档默认按Azure Global环境运行，Rover支持AzureGlobal和AzureChina（世纪互联）等所有Azure公有云，在rover命令行登陆azure之前需要设置所使用的云环境
 
-  **Azure Global ：**
+  **Azure Global** ：
+  
+```bash
+az cloud set -n AzureCloud
+```
 
-    ```bash
-        az cloud set -n AzureCloud
-    ```
-  **Azure China ：**
 
-    ```bash
-        az cloud set -n AzureChinaCloud
-    ```
+\
+**Azure China ：**
 
-    通过命令行运行rover login登录Azure
+```bash
+az cloud set -n AzureChinaCloud
+```
+\
+通过命令行运行**rover login**登录Azure
 
-    ```bash
-    rover login
-    ```
+```bash
+rover login
+```
 
 单击URL [[https://microsoft.com/devicelogin]{.underline}](https://microsoft.com/devicelogin)，设置代码并使用您的Azure 帐户进行身份验证。
 
@@ -309,7 +312,7 @@
 
 ![图形用户界面, 文本描述已自动生成](./media/media/image20.png)
 
-**注意：**每次通过rover命令执行正式部署（-a apply）前,要先通过rover xxxxxx **-a plan**命令进行环境检查和部署变化，以便确保部署成功和预先了解部署前后状态变化。观测下面两个Rover命令的参数变化：
+**注意**:每次通过rover命令执行正式部署（-a apply）前,要先通过rover xxxxxx **-a plan**命令进行环境检查和部署变化，以便确保部署成功和预先了解部署前后状态变化。观测下面两个Rover命令的参数变化：
 
 ![文本描述已自动生成](./media/media/image21.png)
 
@@ -336,20 +339,27 @@
 
 ![图形用户界面, 文本, 应用程序, 电子邮件描述已自动生成](./media/media/image27.png)
 
-15. 每个部署的readme文件在完成了相应部分的部署操作后，都会提示下一步操作，按readme中指引的Next
-    Step完成之后的操作任务。当完成level2后，所需的企业级landing
-    zone部署基本就绪了。Partner和客户可以在这之上继续使用Azrue
-    Terraform部署应用worklaod。
+15. 每个部署的readme文件在完成了相应部分的部署操作后，都会提示下一步操作，按readme中指引的NextStep完成之后的操作任务。当完成level2后，所需的企业级landing zone部署基本就绪了。Partner和客户可以在这之上继续使用Azrue Terraform部署应用worklaod。
 
 ![文本描述已自动生成](./media/media/image28.png)
 
-16. 上面实验中，通过Azure Terraform Rover完成了Landing Zone的部署，即：
+16. **注意**：仔细阅读每个部署的**readme**文件的步骤信息。
+    \
+    有些步骤需要重新执行ansible-playbook命令，因为部署过程更新了service principal和credential。
 
-    > Level 0： Lauchpad，
-    >
-    > Level 1 ：管理、身份，然后是 alz。完成第 1 级后，
-    >
-    > Level 2: Azure 订阅自动售货机 (asvm) 和身份，以及使用虚拟WAN的连接组件。
+    ![文本描述已自动生成](./media/media/image30.png)
+    
+    有些步骤需要退出当前登录的session，如果前一步骤的部署通过使用 **--impersonate-sp-from-keyvault-url**参数登录，使用了不同的service principal
+
+    ![文本描述已自动生成](./media/media/image31.png)
+
+17. 上面实验中，通过Azure Terraform Rover完成了Landing Zone的部署，即：
+
+    Level 0： Lauchpad，
+    
+    Level 1 ：管理、身份，然后是 alz。完成第 1 级后，
+    
+    Level 2: Azure 订阅自动售货机 (asvm) 和身份，以及使用虚拟WAN的连接组件。
 
 &nbsp;
 &nbsp;
@@ -357,12 +367,13 @@
 ## 考虑
 
    接下来，Partner可以通过生成的tfvar变量及rover命令近一步理解Azure Terraform Provider/Azure Terraform Module/Rover/RoverIgnite逻辑关系，并尝试部署你客户业务场景中所需的上层应用workload，比如IaaS（VM，存储等），PaaS（Mysql，Web Apps等)。
-   &nbsp;
+   \
+   \
    近一步学习和使用Azure Landing Zone for Terraform还可以参考如下资源：
 
-   [Azure Landing Zone](https://docs.microsoft.com/zh-cn/azure/cloud-adoption-framework/ready/landing-zone/)
+   [Azure Landing Zone](https://docs.microsoft.com/zh-cn/azure/cloud-adoption-framework/ready/landing-zone/) 
 
-   [Terraform语言](https://www.terraform.io/language)
+   [Terraform语言](https://www.terraform.io/language) 
 
    [Cloud Adoption Framework for Terraform Landing zones](https://aztfmod.github.io/documentation/)
 
